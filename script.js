@@ -5,7 +5,16 @@ console.log('javascript has been sourced');
 $(document).ready(function() {
     $('#generate').on('click', function() {
         console.log('generate button was clicked');
-        $('body').append('<div id="newDiv"></div>');
+        var numberOfClicks = 0;
+        numberOfClicks++;
+        $('body').append(
+            '<div class="colorDiv">' +
+            '<p>' + numberOfClicks + '<p>' +
+            '<button>Swap</button>' +
+            '<button>Delete</button>' + '</div>'
+        );
+
+        $('#newDiv').append('<p>"numberOfClicks"</p>');
     })
 
 
